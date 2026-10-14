@@ -202,8 +202,12 @@ exteriores ni tildes.
 6. Clientes que se ejecutan en el navegador: el servidor admite por defecto cualquier puerto
    de `localhost`. Otro origen debe agregarse en `cors.origenes.permitidos`.
 7. Emulador de Android: el equipo anfitrión se alcanza en `10.0.2.2`, no en `localhost`.
+8. Para mantener consistencia visual, el cliente web (`04. CLIWEB`) sigue el mismo diseño
+   que el cliente de escritorio (`04. CLIESC`): barra superior con marca y acciones de sesión,
+   y pestañas para navegar entre Catálogo y Conversión.
 
 El cliente de consola (`04. CLICON/CLICON`) puede tomarse como implementación de referencia.
+El cliente de escritorio (`04. CLIESC`) sirve como referencia de diseño visual para el cliente web.
 
 ## Pruebas
 
@@ -211,6 +215,8 @@ El cliente de consola (`04. CLICON/CLICON`) puede tomarse como implementación d
 |---|---|---|
 | Servidor | 226 | Servicios, estrategias de conversión, seguridad, filtro CORS y controlador |
 | Cliente de consola | 273 | Controladores, vistas, lectura de datos y adaptador SOAP |
+| Cliente de escritorio | 253 | Controladores, modelo, utilidades, adaptador SOAP y casos borde |
+| Cliente web | 237 | Modelo, utilidades, controladores, adaptador SOAP y casos borde |
 
 Las pruebas utilizan JUnit 5 y se ejecutan con `mvn test` o con *Clean and Build* en NetBeans.
 Ninguna requiere Payara: las pruebas SOAP del cliente publican un servicio de prueba dentro
