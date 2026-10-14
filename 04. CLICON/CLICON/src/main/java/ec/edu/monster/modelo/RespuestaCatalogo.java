@@ -3,9 +3,6 @@ package ec.edu.monster.modelo;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Respuesta de la operación obtenerCategorias.
- */
 public class RespuestaCatalogo extends Respuesta {
 
     private List<String> categorias = new ArrayList<>();

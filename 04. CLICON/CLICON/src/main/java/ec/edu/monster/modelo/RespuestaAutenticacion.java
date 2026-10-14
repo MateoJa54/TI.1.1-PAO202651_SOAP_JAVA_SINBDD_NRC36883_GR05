@@ -1,8 +1,5 @@
 package ec.edu.monster.modelo;
 
-/**
- * Respuesta de la operación autenticar.
- */
 public class RespuestaAutenticacion extends Respuesta {
 
     private String token;

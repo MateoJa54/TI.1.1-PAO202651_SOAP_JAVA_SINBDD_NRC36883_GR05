@@ -20,6 +20,27 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
+    <!-- Errores de protocolo: una operación inexistente o un mensaje mal formado hace que Payara
+         conteste "java.lang.NullPointerException". Este filtro lo cambia por un Fault genérico.
+         Las operaciones deben coincidir con los @WebMethod de WSConversorUnidades
+         (lo verifica la prueba FiltroPeticionSoapTest). Va después de CORS. -->
+    <filter>
+        <filter-name>FiltroPeticionSoap</filter-name>
+        <filter-class>ec.edu.monster.seguridad.FiltroPeticionSoap</filter-class>
+        <init-param>
+            <param-name>soap.espacio.nombres</param-name>
+            <param-value>http://ws.monster.edu.ec/</param-value>
+        </init-param>
+        <init-param>
+            <param-name>soap.operaciones</param-name>
+            <param-value>autenticar,obtenerCategorias,obtenerUnidades,convertir</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>FiltroPeticionSoap</filter-name>
+        <url-pattern>/WSConversorUnidades</url-pattern>
+    </filter-mapping>
+
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>
     </welcome-file-list>

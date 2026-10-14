@@ -474,121 +474,160 @@ Shadow=0</a:DisplayPreferences>
 <o:ProjectDiagram Ref="o3"/>
 </c:DefaultDiagram>
 <c:ModelsAndFiles>
-<o:ModelDocument Id="o4">
-<a:ObjectID>AB941554-6C05-49F5-A846-AE2171697A18</a:ObjectID>
-<a:Name>CU_Sistema_General</a:Name>
-<a:Code>CU_Sistema_General</a:Code>
-<a:CreationDate>1791462561</a:CreationDate>
+<o:ModelDocument Id="o951">
+<a:ObjectID>02D8DF22-9E82-45AA-A628-A0D937A78164</a:ObjectID>
+<a:Name>CU_01_Autenticarse</a:Name>
+<a:Code>CU_01_Autenticarse</a:Code>
+<a:CreationDate>1792012559</a:CreationDate>
 <a:Creator>mateo</a:Creator>
-<a:ModificationDate>1791462561</a:ModificationDate>
+<a:ModificationDate>1792012559</a:ModificationDate>
 <a:Modifier>mateo</a:Modifier>
-<a:Location>file:///%[PRJ_ROOT_DIR]%/CU_Sistema_General.oom</a:Location>
+<a:Location>file:///%[PRJ_ROOT_DIR]%/CU_01_Autenticarse.oom</a:Location>
 <a:Extension>oom</a:Extension>
-<a:ModelDocument.ModelID>833B0A12-32F5-45F9-9F4E-482F47D96DAE</a:ModelDocument.ModelID>
+<a:ModelDocument.ModelID>7822469B-555D-467C-9EDB-93E5CC7F13B0</a:ModelDocument.ModelID>
 <a:ModelClassID>18112060-1A4B-11D1-83D9-444553540000</a:ModelClassID>
 </o:ModelDocument>
-<o:ModelDocument Id="o5">
-<a:ObjectID>7AE9C47F-FB98-4712-BF6C-1377D7D70DDB</a:ObjectID>
-<a:Name>CU_Autenticarse</a:Name>
-<a:Code>CU_Autenticarse</a:Code>
-<a:CreationDate>1791462561</a:CreationDate>
+<o:ModelDocument Id="o952">
+<a:ObjectID>47040320-EC2F-4A60-A13E-5389D8166726</a:ObjectID>
+<a:Name>CU_02_Consultar_Catalogo</a:Name>
+<a:Code>CU_02_Consultar_Catalogo</a:Code>
+<a:CreationDate>1792012559</a:CreationDate>
 <a:Creator>mateo</a:Creator>
-<a:ModificationDate>1791462561</a:ModificationDate>
+<a:ModificationDate>1792012559</a:ModificationDate>
 <a:Modifier>mateo</a:Modifier>
-<a:Location>file:///%[PRJ_ROOT_DIR]%/CU_Autenticarse.oom</a:Location>
+<a:Location>file:///%[PRJ_ROOT_DIR]%/CU_02_Consultar_Catalogo.oom</a:Location>
 <a:Extension>oom</a:Extension>
-<a:ModelDocument.ModelID>F150A12E-5916-491B-ABB9-F5C4F41036F2</a:ModelDocument.ModelID>
+<a:ModelDocument.ModelID>6376D2EA-3B88-4292-A4A3-011ABEBE077D</a:ModelDocument.ModelID>
 <a:ModelClassID>18112060-1A4B-11D1-83D9-444553540000</a:ModelClassID>
 </o:ModelDocument>
-<o:ModelDocument Id="o6">
-<a:ObjectID>23792756-E7A8-443B-A249-00D1FA75EC2D</a:ObjectID>
-<a:Name>CU_Consultar_Catalogo</a:Name>
-<a:Code>CU_Consultar_Catalogo</a:Code>
-<a:CreationDate>1791462561</a:CreationDate>
+<o:ModelDocument Id="o953">
+<a:ObjectID>55C2EFA2-A2AE-4CAB-8E61-DE53D0D5BE64</a:ObjectID>
+<a:Name>CU_03_Consultar_Unidades_Por_Categoria</a:Name>
+<a:Code>CU_03_Consultar_Unidades_Por_Categoria</a:Code>
+<a:CreationDate>1792012559</a:CreationDate>
 <a:Creator>mateo</a:Creator>
-<a:ModificationDate>1791462561</a:ModificationDate>
+<a:ModificationDate>1792012559</a:ModificationDate>
 <a:Modifier>mateo</a:Modifier>
-<a:Location>file:///%[PRJ_ROOT_DIR]%/CU_Consultar_Catalogo.oom</a:Location>
+<a:Location>file:///%[PRJ_ROOT_DIR]%/CU_03_Consultar_Unidades_Por_Categoria.oom</a:Location>
 <a:Extension>oom</a:Extension>
-<a:ModelDocument.ModelID>6ECBB17A-9E42-4406-92E5-6B456D33E26B</a:ModelDocument.ModelID>
+<a:ModelDocument.ModelID>C65C08F8-DB91-4811-B3BE-EB3E7449952F</a:ModelDocument.ModelID>
 <a:ModelClassID>18112060-1A4B-11D1-83D9-444553540000</a:ModelClassID>
 </o:ModelDocument>
-<o:ModelDocument Id="o7">
-<a:ObjectID>8BDA8840-CA9E-450B-AF3E-B21BB7EA6A59</a:ObjectID>
-<a:Name>CU_Realizar_Conversion</a:Name>
-<a:Code>CU_Realizar_Conversion</a:Code>
-<a:CreationDate>1791462561</a:CreationDate>
+<o:ModelDocument Id="o954">
+<a:ObjectID>1431BBE7-7DEC-4B23-8C4D-59B3CC2C767A</a:ObjectID>
+<a:Name>CU_04_Realizar_Conversion</a:Name>
+<a:Code>CU_04_Realizar_Conversion</a:Code>
+<a:CreationDate>1792012559</a:CreationDate>
 <a:Creator>mateo</a:Creator>
-<a:ModificationDate>1791462561</a:ModificationDate>
+<a:ModificationDate>1792012559</a:ModificationDate>
 <a:Modifier>mateo</a:Modifier>
-<a:Location>file:///%[PRJ_ROOT_DIR]%/CU_Realizar_Conversion.oom</a:Location>
+<a:Location>file:///%[PRJ_ROOT_DIR]%/CU_04_Realizar_Conversion.oom</a:Location>
 <a:Extension>oom</a:Extension>
-<a:ModelDocument.ModelID>CC7E0707-E2BD-4BAE-8281-C770BD3C88B7</a:ModelDocument.ModelID>
+<a:ModelDocument.ModelID>F7EDC6EF-CE53-4013-9494-E16547CC1A14</a:ModelDocument.ModelID>
 <a:ModelClassID>18112060-1A4B-11D1-83D9-444553540000</a:ModelClassID>
 </o:ModelDocument>
-<o:ModelDocument Id="o8">
-<a:ObjectID>10B55EB5-A656-4E39-990E-6423B11DE014</a:ObjectID>
-<a:Name>CU_Validar_Token</a:Name>
-<a:Code>CU_Validar_Token</a:Code>
-<a:CreationDate>1791462561</a:CreationDate>
+<o:ModelDocument Id="o955">
+<a:ObjectID>47C6D24A-1392-4022-A7BA-F7CA79D817AC</a:ObjectID>
+<a:Name>CU_05_Validar_Token</a:Name>
+<a:Code>CU_05_Validar_Token</a:Code>
+<a:CreationDate>1792012559</a:CreationDate>
 <a:Creator>mateo</a:Creator>
-<a:ModificationDate>1791462561</a:ModificationDate>
+<a:ModificationDate>1792012559</a:ModificationDate>
 <a:Modifier>mateo</a:Modifier>
-<a:Location>file:///%[PRJ_ROOT_DIR]%/CU_Validar_Token.oom</a:Location>
+<a:Location>file:///%[PRJ_ROOT_DIR]%/CU_05_Validar_Token.oom</a:Location>
 <a:Extension>oom</a:Extension>
-<a:ModelDocument.ModelID>369EEF16-4794-4862-A9E0-398012509832</a:ModelDocument.ModelID>
+<a:ModelDocument.ModelID>5F9DEDB8-C61A-4FC0-97EB-3709F9643F8B</a:ModelDocument.ModelID>
 <a:ModelClassID>18112060-1A4B-11D1-83D9-444553540000</a:ModelClassID>
 </o:ModelDocument>
-<o:ModelDocument Id="o9">
-<a:ObjectID>480A874D-A018-4C9C-A753-44509E2C44A9</a:ObjectID>
-<a:Name>CU_Validar_Datos</a:Name>
-<a:Code>CU_Validar_Datos</a:Code>
-<a:CreationDate>1791462561</a:CreationDate>
+<o:ModelDocument Id="o956">
+<a:ObjectID>0F4CB6DE-3F42-43C2-B56E-A94BA8595D2F</a:ObjectID>
+<a:Name>CU_06_Validar_Datos</a:Name>
+<a:Code>CU_06_Validar_Datos</a:Code>
+<a:CreationDate>1792012559</a:CreationDate>
 <a:Creator>mateo</a:Creator>
-<a:ModificationDate>1791462561</a:ModificationDate>
+<a:ModificationDate>1792012559</a:ModificationDate>
 <a:Modifier>mateo</a:Modifier>
-<a:Location>file:///%[PRJ_ROOT_DIR]%/CU_Validar_Datos.oom</a:Location>
+<a:Location>file:///%[PRJ_ROOT_DIR]%/CU_06_Validar_Datos.oom</a:Location>
 <a:Extension>oom</a:Extension>
-<a:ModelDocument.ModelID>CF20C13B-97BB-43AE-B97D-DFB4196D3F6D</a:ModelDocument.ModelID>
+<a:ModelDocument.ModelID>E3EA365B-21F9-4001-AF85-AFDA2B8A6E51</a:ModelDocument.ModelID>
 <a:ModelClassID>18112060-1A4B-11D1-83D9-444553540000</a:ModelClassID>
 </o:ModelDocument>
-<o:ModelDocument Id="o10">
-<a:ObjectID>D64F1601-AF99-40CA-B427-E2E99C82214E</a:ObjectID>
-<a:Name>CU_Generar_Respuesta</a:Name>
-<a:Code>CU_Generar_Respuesta</a:Code>
-<a:CreationDate>1791462561</a:CreationDate>
+<o:ModelDocument Id="o957">
+<a:ObjectID>874C45E6-5E2E-4126-A436-87B9332B57A8</a:ObjectID>
+<a:Name>CU_07_Generar_Respuesta</a:Name>
+<a:Code>CU_07_Generar_Respuesta</a:Code>
+<a:CreationDate>1792012559</a:CreationDate>
 <a:Creator>mateo</a:Creator>
-<a:ModificationDate>1791462561</a:ModificationDate>
+<a:ModificationDate>1792012559</a:ModificationDate>
 <a:Modifier>mateo</a:Modifier>
-<a:Location>file:///%[PRJ_ROOT_DIR]%/CU_Generar_Respuesta.oom</a:Location>
+<a:Location>file:///%[PRJ_ROOT_DIR]%/CU_07_Generar_Respuesta.oom</a:Location>
 <a:Extension>oom</a:Extension>
-<a:ModelDocument.ModelID>8B3EA080-015A-47FB-AE64-0C885533A5EC</a:ModelDocument.ModelID>
+<a:ModelDocument.ModelID>AFEAE08C-4223-44C0-934A-56EFE1B6560F</a:ModelDocument.ModelID>
 <a:ModelClassID>18112060-1A4B-11D1-83D9-444553540000</a:ModelClassID>
 </o:ModelDocument>
-<o:ModelDocument Id="o11">
-<a:ObjectID>00143DFC-148C-47CB-ACEA-380E6B05B35D</a:ObjectID>
-<a:Name>CU_Gestionar_Token_Invalido</a:Name>
-<a:Code>CU_Gestionar_Token_Invalido</a:Code>
-<a:CreationDate>1791462561</a:CreationDate>
+<o:ModelDocument Id="o958">
+<a:ObjectID>0CF8BAB0-40FF-40EA-84C5-44BA5234E264</a:ObjectID>
+<a:Name>CU_08_Gestionar_Token_Invalido</a:Name>
+<a:Code>CU_08_Gestionar_Token_Invalido</a:Code>
+<a:CreationDate>1792012559</a:CreationDate>
 <a:Creator>mateo</a:Creator>
-<a:ModificationDate>1791462561</a:ModificationDate>
+<a:ModificationDate>1792012559</a:ModificationDate>
 <a:Modifier>mateo</a:Modifier>
-<a:Location>file:///%[PRJ_ROOT_DIR]%/CU_Gestionar_Token_Invalido.oom</a:Location>
+<a:Location>file:///%[PRJ_ROOT_DIR]%/CU_08_Gestionar_Token_Invalido.oom</a:Location>
 <a:Extension>oom</a:Extension>
-<a:ModelDocument.ModelID>1670D42C-1D2B-4429-8B0B-D636F03B2EF1</a:ModelDocument.ModelID>
+<a:ModelDocument.ModelID>8CA14495-4838-4B69-8E83-634D8AC841A5</a:ModelDocument.ModelID>
 <a:ModelClassID>18112060-1A4B-11D1-83D9-444553540000</a:ModelClassID>
 </o:ModelDocument>
-<o:ModelDocument Id="o12">
-<a:ObjectID>1A23387F-D928-4C8D-B071-C8C66BFEFEB4</a:ObjectID>
-<a:Name>CU_Gestionar_Sesion_Expirada</a:Name>
-<a:Code>CU_Gestionar_Sesion_Expirada</a:Code>
-<a:CreationDate>1791462561</a:CreationDate>
+<o:ModelDocument Id="o959">
+<a:ObjectID>D4C73C49-5C52-4767-BA86-EA26A6CD5C07</a:ObjectID>
+<a:Name>CU_09_Gestionar_Sesion_Expirada</a:Name>
+<a:Code>CU_09_Gestionar_Sesion_Expirada</a:Code>
+<a:CreationDate>1792012559</a:CreationDate>
 <a:Creator>mateo</a:Creator>
-<a:ModificationDate>1791462561</a:ModificationDate>
+<a:ModificationDate>1792012559</a:ModificationDate>
 <a:Modifier>mateo</a:Modifier>
-<a:Location>file:///%[PRJ_ROOT_DIR]%/CU_Gestionar_Sesion_Expirada.oom</a:Location>
+<a:Location>file:///%[PRJ_ROOT_DIR]%/CU_09_Gestionar_Sesion_Expirada.oom</a:Location>
 <a:Extension>oom</a:Extension>
-<a:ModelDocument.ModelID>A58264F4-CE5D-4501-9B6E-C0C82567DCC1</a:ModelDocument.ModelID>
+<a:ModelDocument.ModelID>E264836C-E69D-4934-9266-A9707281A37F</a:ModelDocument.ModelID>
+<a:ModelClassID>18112060-1A4B-11D1-83D9-444553540000</a:ModelClassID>
+</o:ModelDocument>
+<o:ModelDocument Id="o960">
+<a:ObjectID>C1D4C42F-B68D-4680-A8F6-9281989CE8D2</a:ObjectID>
+<a:Name>CU_10_Gestionar_Unidad_No_Soportada</a:Name>
+<a:Code>CU_10_Gestionar_Unidad_No_Soportada</a:Code>
+<a:CreationDate>1792012559</a:CreationDate>
+<a:Creator>mateo</a:Creator>
+<a:ModificationDate>1792012559</a:ModificationDate>
+<a:Modifier>mateo</a:Modifier>
+<a:Location>file:///%[PRJ_ROOT_DIR]%/CU_10_Gestionar_Unidad_No_Soportada.oom</a:Location>
+<a:Extension>oom</a:Extension>
+<a:ModelDocument.ModelID>C28F3357-7B7F-4A32-BA55-CA124688E1A0</a:ModelDocument.ModelID>
+<a:ModelClassID>18112060-1A4B-11D1-83D9-444553540000</a:ModelClassID>
+</o:ModelDocument>
+<o:ModelDocument Id="o961">
+<a:ObjectID>F3530057-4679-4F51-B382-7798224BA327</a:ObjectID>
+<a:Name>CU_11_Gestionar_Datos_Inconsistentes</a:Name>
+<a:Code>CU_11_Gestionar_Datos_Inconsistentes</a:Code>
+<a:CreationDate>1792012559</a:CreationDate>
+<a:Creator>mateo</a:Creator>
+<a:ModificationDate>1792012559</a:ModificationDate>
+<a:Modifier>mateo</a:Modifier>
+<a:Location>file:///%[PRJ_ROOT_DIR]%/CU_11_Gestionar_Datos_Inconsistentes.oom</a:Location>
+<a:Extension>oom</a:Extension>
+<a:ModelDocument.ModelID>528AA822-0384-4DEC-B946-9870B4E49434</a:ModelDocument.ModelID>
+<a:ModelClassID>18112060-1A4B-11D1-83D9-444553540000</a:ModelClassID>
+</o:ModelDocument>
+<o:ModelDocument Id="o962">
+<a:ObjectID>B6D3D228-BA8F-466E-852A-8F43933CBC53</a:ObjectID>
+<a:Name>CU_Sistema</a:Name>
+<a:Code>CU_Sistema</a:Code>
+<a:CreationDate>1792012559</a:CreationDate>
+<a:Creator>mateo</a:Creator>
+<a:ModificationDate>1792012559</a:ModificationDate>
+<a:Modifier>mateo</a:Modifier>
+<a:Location>file:///%[PRJ_ROOT_DIR]%/CU_Sistema.oom</a:Location>
+<a:Extension>oom</a:Extension>
+<a:ModelDocument.ModelID>C9B55C36-0D3C-430A-B932-BC447EF6901B</a:ModelDocument.ModelID>
 <a:ModelClassID>18112060-1A4B-11D1-83D9-444553540000</a:ModelClassID>
 </o:ModelDocument>
 </c:ModelsAndFiles>

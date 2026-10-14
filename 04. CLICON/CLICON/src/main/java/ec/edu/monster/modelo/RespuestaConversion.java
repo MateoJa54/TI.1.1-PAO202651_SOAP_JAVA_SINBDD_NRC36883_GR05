@@ -1,8 +1,5 @@
 package ec.edu.monster.modelo;
 
-/**
- * Respuesta de la operación convertir. El resultado es nulo cuando hubo error.
- */
 public class RespuestaConversion extends Respuesta {
 
     private Double resultado;

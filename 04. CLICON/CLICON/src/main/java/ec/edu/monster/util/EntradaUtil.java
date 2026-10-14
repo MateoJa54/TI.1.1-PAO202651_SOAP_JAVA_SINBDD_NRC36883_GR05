@@ -137,11 +137,15 @@ public class EntradaUtil {
     /**
      * @return el número con 12 cifras significativas y sin ceros sobrantes:
      *         1609.344, 0.3048, 100. Los muy grandes o muy pequeños se muestran
-     *         en notación científica (1E+20) para que no ocupen toda la pantalla
+     *         en notación científica (1E+20) para que no ocupen toda la pantalla.
+     *         NaN e infinitos (que el contrato xsd:double permite) se muestran tal cual
      */
     public static String formatear(double numero) {
         if (numero == 0) {
             return "0";
+        }
+        if (Double.isNaN(numero) || Double.isInfinite(numero)) {
+            return Double.toString(numero);
         }
         BigDecimal redondeado = new BigDecimal(numero).round(CIFRAS_AL_MOSTRAR).stripTrailingZeros();
         double magnitud = Math.abs(numero);

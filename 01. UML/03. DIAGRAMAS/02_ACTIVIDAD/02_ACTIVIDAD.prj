@@ -474,95 +474,160 @@ Shadow=0</a:DisplayPreferences>
 <o:ProjectDiagram Ref="o3"/>
 </c:DefaultDiagram>
 <c:ModelsAndFiles>
-<o:ModelDocument Id="o901">
-<a:ObjectID>D0B55A5F-18AA-429E-ABE4-098D45DD24CC</a:ObjectID>
-<a:Name>DA_Sistema_General</a:Name>
-<a:Code>DA_Sistema_General</a:Code>
-<a:CreationDate>1791928623</a:CreationDate>
+<o:ModelDocument Id="o951">
+<a:ObjectID>8DC881FF-2672-4FA8-BCCA-04067661F0B7</a:ObjectID>
+<a:Name>DA_00_Sistema_General</a:Name>
+<a:Code>DA_00_Sistema_General</a:Code>
+<a:CreationDate>1792016851</a:CreationDate>
 <a:Creator>mateo</a:Creator>
-<a:ModificationDate>1791928623</a:ModificationDate>
+<a:ModificationDate>1792016851</a:ModificationDate>
 <a:Modifier>mateo</a:Modifier>
-<a:Location>file:///%[PRJ_ROOT_DIR]%/DA_Sistema_General.oom</a:Location>
+<a:Location>file:///%[PRJ_ROOT_DIR]%/DA_00_Sistema_General.oom</a:Location>
 <a:Extension>oom</a:Extension>
-<a:ModelDocument.ModelID>DA4C0AA5-4A19-4879-B706-54C23F534660</a:ModelDocument.ModelID>
+<a:ModelDocument.ModelID>1C6E88D1-2A2A-41CA-B75C-25C603068813</a:ModelDocument.ModelID>
 <a:ModelClassID>18112060-1A4B-11D1-83D9-444553540000</a:ModelClassID>
 </o:ModelDocument>
-<o:ModelDocument Id="o902">
-<a:ObjectID>7CBB1316-F755-42C4-9ACA-FC9D91CA1443</a:ObjectID>
-<a:Name>DA_Autenticarse</a:Name>
-<a:Code>DA_Autenticarse</a:Code>
-<a:CreationDate>1791928623</a:CreationDate>
+<o:ModelDocument Id="o952">
+<a:ObjectID>6692F048-8B31-40B1-B645-1F3462A53BB2</a:ObjectID>
+<a:Name>DA_01_Autenticarse</a:Name>
+<a:Code>DA_01_Autenticarse</a:Code>
+<a:CreationDate>1792016851</a:CreationDate>
 <a:Creator>mateo</a:Creator>
-<a:ModificationDate>1791928623</a:ModificationDate>
+<a:ModificationDate>1792016851</a:ModificationDate>
 <a:Modifier>mateo</a:Modifier>
-<a:Location>file:///%[PRJ_ROOT_DIR]%/DA_Autenticarse.oom</a:Location>
+<a:Location>file:///%[PRJ_ROOT_DIR]%/DA_01_Autenticarse.oom</a:Location>
 <a:Extension>oom</a:Extension>
-<a:ModelDocument.ModelID>7A3909A0-1F00-4045-920F-312B89241A74</a:ModelDocument.ModelID>
+<a:ModelDocument.ModelID>5B724542-EBE1-419C-880D-A9EFF93A5184</a:ModelDocument.ModelID>
 <a:ModelClassID>18112060-1A4B-11D1-83D9-444553540000</a:ModelClassID>
 </o:ModelDocument>
-<o:ModelDocument Id="o903">
-<a:ObjectID>09F61049-3FFB-4A33-B27F-2FB676B7DF90</a:ObjectID>
-<a:Name>DA_Consultar_Catalogo</a:Name>
-<a:Code>DA_Consultar_Catalogo</a:Code>
-<a:CreationDate>1791928623</a:CreationDate>
+<o:ModelDocument Id="o953">
+<a:ObjectID>697C1EEF-06A8-491F-8C9B-7D131B3BC8D6</a:ObjectID>
+<a:Name>DA_02_Consultar_Catalogo</a:Name>
+<a:Code>DA_02_Consultar_Catalogo</a:Code>
+<a:CreationDate>1792016851</a:CreationDate>
 <a:Creator>mateo</a:Creator>
-<a:ModificationDate>1791928623</a:ModificationDate>
+<a:ModificationDate>1792016851</a:ModificationDate>
 <a:Modifier>mateo</a:Modifier>
-<a:Location>file:///%[PRJ_ROOT_DIR]%/DA_Consultar_Catalogo.oom</a:Location>
+<a:Location>file:///%[PRJ_ROOT_DIR]%/DA_02_Consultar_Catalogo.oom</a:Location>
 <a:Extension>oom</a:Extension>
-<a:ModelDocument.ModelID>1B722674-8EC5-4740-8FBC-D65F6601F3DC</a:ModelDocument.ModelID>
+<a:ModelDocument.ModelID>4A4B01AB-9124-49F3-A9FE-45D808831A83</a:ModelDocument.ModelID>
 <a:ModelClassID>18112060-1A4B-11D1-83D9-444553540000</a:ModelClassID>
 </o:ModelDocument>
-<o:ModelDocument Id="o904">
-<a:ObjectID>E3039653-316D-4052-B500-7BD22FA8F7DD</a:ObjectID>
-<a:Name>DA_Generar_Respuesta</a:Name>
-<a:Code>DA_Generar_Respuesta</a:Code>
-<a:CreationDate>1791928623</a:CreationDate>
+<o:ModelDocument Id="o954">
+<a:ObjectID>8ED1F2EB-0ADD-43A6-871D-C271CBDAD124</a:ObjectID>
+<a:Name>DA_03_Consultar_Unidades_Por_Categoria</a:Name>
+<a:Code>DA_03_Consultar_Unidades_Por_Categoria</a:Code>
+<a:CreationDate>1792016851</a:CreationDate>
 <a:Creator>mateo</a:Creator>
-<a:ModificationDate>1791928623</a:ModificationDate>
+<a:ModificationDate>1792016851</a:ModificationDate>
 <a:Modifier>mateo</a:Modifier>
-<a:Location>file:///%[PRJ_ROOT_DIR]%/DA_Generar_Respuesta.oom</a:Location>
+<a:Location>file:///%[PRJ_ROOT_DIR]%/DA_03_Consultar_Unidades_Por_Categoria.oom</a:Location>
 <a:Extension>oom</a:Extension>
-<a:ModelDocument.ModelID>3A9049A7-857C-47E3-AA1A-DA13123087AF</a:ModelDocument.ModelID>
+<a:ModelDocument.ModelID>D77F4DCD-374D-4EF7-A3AB-E30E776FA7F3</a:ModelDocument.ModelID>
 <a:ModelClassID>18112060-1A4B-11D1-83D9-444553540000</a:ModelClassID>
 </o:ModelDocument>
-<o:ModelDocument Id="o905">
-<a:ObjectID>CCA23BAD-5DB6-4BFC-B246-01209B9CDF03</a:ObjectID>
-<a:Name>DA_Realizar_Conversion</a:Name>
-<a:Code>DA_Realizar_Conversion</a:Code>
-<a:CreationDate>1791928623</a:CreationDate>
+<o:ModelDocument Id="o955">
+<a:ObjectID>F6A283B4-F3F8-45ED-86DB-4A9BB5973FE3</a:ObjectID>
+<a:Name>DA_04_Realizar_Conversion</a:Name>
+<a:Code>DA_04_Realizar_Conversion</a:Code>
+<a:CreationDate>1792016851</a:CreationDate>
 <a:Creator>mateo</a:Creator>
-<a:ModificationDate>1791928623</a:ModificationDate>
+<a:ModificationDate>1792016851</a:ModificationDate>
 <a:Modifier>mateo</a:Modifier>
-<a:Location>file:///%[PRJ_ROOT_DIR]%/DA_Realizar_Conversion.oom</a:Location>
+<a:Location>file:///%[PRJ_ROOT_DIR]%/DA_04_Realizar_Conversion.oom</a:Location>
 <a:Extension>oom</a:Extension>
-<a:ModelDocument.ModelID>FD2E0DCA-7CD6-4BAC-94C0-0C583DFD4E6F</a:ModelDocument.ModelID>
+<a:ModelDocument.ModelID>D671D526-DE37-4D75-BB96-4B5DF3CDD5B5</a:ModelDocument.ModelID>
 <a:ModelClassID>18112060-1A4B-11D1-83D9-444553540000</a:ModelClassID>
 </o:ModelDocument>
-<o:ModelDocument Id="o906">
-<a:ObjectID>14FE02F5-9FF2-404B-A267-D4792E739C18</a:ObjectID>
-<a:Name>DA_Validar_Datos</a:Name>
-<a:Code>DA_Validar_Datos</a:Code>
-<a:CreationDate>1791928623</a:CreationDate>
+<o:ModelDocument Id="o956">
+<a:ObjectID>4203DC77-9AEA-46E0-9832-B4F45C736CCB</a:ObjectID>
+<a:Name>DA_05_Validar_Token</a:Name>
+<a:Code>DA_05_Validar_Token</a:Code>
+<a:CreationDate>1792016851</a:CreationDate>
 <a:Creator>mateo</a:Creator>
-<a:ModificationDate>1791928623</a:ModificationDate>
+<a:ModificationDate>1792016851</a:ModificationDate>
 <a:Modifier>mateo</a:Modifier>
-<a:Location>file:///%[PRJ_ROOT_DIR]%/DA_Validar_Datos.oom</a:Location>
+<a:Location>file:///%[PRJ_ROOT_DIR]%/DA_05_Validar_Token.oom</a:Location>
 <a:Extension>oom</a:Extension>
-<a:ModelDocument.ModelID>097BD436-0288-458C-8BF2-B1E45CDD002B</a:ModelDocument.ModelID>
+<a:ModelDocument.ModelID>0D9B5EC8-23C0-4A19-ADC5-9E6D972D29F6</a:ModelDocument.ModelID>
 <a:ModelClassID>18112060-1A4B-11D1-83D9-444553540000</a:ModelClassID>
 </o:ModelDocument>
-<o:ModelDocument Id="o907">
-<a:ObjectID>6A3F68D3-DFA8-4B51-989A-D455F6994EE3</a:ObjectID>
-<a:Name>DA_Validar_Token</a:Name>
-<a:Code>DA_Validar_Token</a:Code>
-<a:CreationDate>1791928623</a:CreationDate>
+<o:ModelDocument Id="o957">
+<a:ObjectID>E5FC7228-3C77-4D6B-8ADA-F6CFE48D127A</a:ObjectID>
+<a:Name>DA_06_Validar_Datos</a:Name>
+<a:Code>DA_06_Validar_Datos</a:Code>
+<a:CreationDate>1792016851</a:CreationDate>
 <a:Creator>mateo</a:Creator>
-<a:ModificationDate>1791928623</a:ModificationDate>
+<a:ModificationDate>1792016851</a:ModificationDate>
 <a:Modifier>mateo</a:Modifier>
-<a:Location>file:///%[PRJ_ROOT_DIR]%/DA_Validar_Token.oom</a:Location>
+<a:Location>file:///%[PRJ_ROOT_DIR]%/DA_06_Validar_Datos.oom</a:Location>
 <a:Extension>oom</a:Extension>
-<a:ModelDocument.ModelID>43DF090D-D15B-44A9-B079-7533E63DBF9F</a:ModelDocument.ModelID>
+<a:ModelDocument.ModelID>B8326440-B470-4BAD-8391-C9CF64F24A97</a:ModelDocument.ModelID>
+<a:ModelClassID>18112060-1A4B-11D1-83D9-444553540000</a:ModelClassID>
+</o:ModelDocument>
+<o:ModelDocument Id="o958">
+<a:ObjectID>B6159781-7E70-4280-9B82-0DBEC04C32E5</a:ObjectID>
+<a:Name>DA_07_Generar_Respuesta</a:Name>
+<a:Code>DA_07_Generar_Respuesta</a:Code>
+<a:CreationDate>1792016851</a:CreationDate>
+<a:Creator>mateo</a:Creator>
+<a:ModificationDate>1792016851</a:ModificationDate>
+<a:Modifier>mateo</a:Modifier>
+<a:Location>file:///%[PRJ_ROOT_DIR]%/DA_07_Generar_Respuesta.oom</a:Location>
+<a:Extension>oom</a:Extension>
+<a:ModelDocument.ModelID>1FEDF540-FAC2-4FF1-B97A-B002D42A487E</a:ModelDocument.ModelID>
+<a:ModelClassID>18112060-1A4B-11D1-83D9-444553540000</a:ModelClassID>
+</o:ModelDocument>
+<o:ModelDocument Id="o959">
+<a:ObjectID>0E7F1B54-7F83-41D2-B263-3BB55E5C786A</a:ObjectID>
+<a:Name>DA_08_Gestionar_Token_Invalido</a:Name>
+<a:Code>DA_08_Gestionar_Token_Invalido</a:Code>
+<a:CreationDate>1792016851</a:CreationDate>
+<a:Creator>mateo</a:Creator>
+<a:ModificationDate>1792016851</a:ModificationDate>
+<a:Modifier>mateo</a:Modifier>
+<a:Location>file:///%[PRJ_ROOT_DIR]%/DA_08_Gestionar_Token_Invalido.oom</a:Location>
+<a:Extension>oom</a:Extension>
+<a:ModelDocument.ModelID>8CDC26B0-501C-4DC3-B986-A0315AB424A0</a:ModelDocument.ModelID>
+<a:ModelClassID>18112060-1A4B-11D1-83D9-444553540000</a:ModelClassID>
+</o:ModelDocument>
+<o:ModelDocument Id="o960">
+<a:ObjectID>A8D5BD1B-5DA0-4833-8CFF-271E370C65FF</a:ObjectID>
+<a:Name>DA_09_Gestionar_Sesion_Expirada</a:Name>
+<a:Code>DA_09_Gestionar_Sesion_Expirada</a:Code>
+<a:CreationDate>1792016851</a:CreationDate>
+<a:Creator>mateo</a:Creator>
+<a:ModificationDate>1792016851</a:ModificationDate>
+<a:Modifier>mateo</a:Modifier>
+<a:Location>file:///%[PRJ_ROOT_DIR]%/DA_09_Gestionar_Sesion_Expirada.oom</a:Location>
+<a:Extension>oom</a:Extension>
+<a:ModelDocument.ModelID>AAE8EB39-DDD4-488B-A2D0-6BB250AC6E2D</a:ModelDocument.ModelID>
+<a:ModelClassID>18112060-1A4B-11D1-83D9-444553540000</a:ModelClassID>
+</o:ModelDocument>
+<o:ModelDocument Id="o961">
+<a:ObjectID>C606B8B9-0B94-43E2-A132-BB4F12F1B78D</a:ObjectID>
+<a:Name>DA_10_Gestionar_Unidad_No_Soportada</a:Name>
+<a:Code>DA_10_Gestionar_Unidad_No_Soportada</a:Code>
+<a:CreationDate>1792016851</a:CreationDate>
+<a:Creator>mateo</a:Creator>
+<a:ModificationDate>1792016851</a:ModificationDate>
+<a:Modifier>mateo</a:Modifier>
+<a:Location>file:///%[PRJ_ROOT_DIR]%/DA_10_Gestionar_Unidad_No_Soportada.oom</a:Location>
+<a:Extension>oom</a:Extension>
+<a:ModelDocument.ModelID>9AA68703-1DAB-4AF2-BD02-F8626A1196A2</a:ModelDocument.ModelID>
+<a:ModelClassID>18112060-1A4B-11D1-83D9-444553540000</a:ModelClassID>
+</o:ModelDocument>
+<o:ModelDocument Id="o962">
+<a:ObjectID>7132F591-DF30-4966-B533-3C1D26988C08</a:ObjectID>
+<a:Name>DA_11_Gestionar_Datos_Inconsistentes</a:Name>
+<a:Code>DA_11_Gestionar_Datos_Inconsistentes</a:Code>
+<a:CreationDate>1792016851</a:CreationDate>
+<a:Creator>mateo</a:Creator>
+<a:ModificationDate>1792016851</a:ModificationDate>
+<a:Modifier>mateo</a:Modifier>
+<a:Location>file:///%[PRJ_ROOT_DIR]%/DA_11_Gestionar_Datos_Inconsistentes.oom</a:Location>
+<a:Extension>oom</a:Extension>
+<a:ModelDocument.ModelID>095192E9-2841-4B50-9A92-2065189782FC</a:ModelDocument.ModelID>
 <a:ModelClassID>18112060-1A4B-11D1-83D9-444553540000</a:ModelClassID>
 </o:ModelDocument>
 </c:ModelsAndFiles>

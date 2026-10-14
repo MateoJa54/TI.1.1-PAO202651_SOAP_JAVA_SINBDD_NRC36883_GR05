@@ -484,7 +484,7 @@ Shadow=0</a:DisplayPreferences>
 <a:Modifier>mateo</a:Modifier>
 <a:Location>file:///%[PRJ_ROOT_DIR]%/DC_Servidor.oom</a:Location>
 <a:Extension>oom</a:Extension>
-<a:ModelDocument.ModelID>B683BD5B-98B7-4C85-BC33-4263B6A40835</a:ModelDocument.ModelID>
+<a:ModelDocument.ModelID>7402DCB0-0716-4EA2-B035-6016748FE0EF</a:ModelDocument.ModelID>
 <a:ModelClassID>18112060-1A4B-11D1-83D9-444553540000</a:ModelClassID>
 </o:ModelDocument>
 <o:ModelDocument Id="o952">
@@ -497,7 +497,7 @@ Shadow=0</a:DisplayPreferences>
 <a:Modifier>mateo</a:Modifier>
 <a:Location>file:///%[PRJ_ROOT_DIR]%/DC_Cliente_Consola.oom</a:Location>
 <a:Extension>oom</a:Extension>
-<a:ModelDocument.ModelID>FBF717E3-6CDF-4AB5-B3F4-855D050071DD</a:ModelDocument.ModelID>
+<a:ModelDocument.ModelID>CCEC854A-1957-4F8B-93A4-D2EFA14D7F7A</a:ModelDocument.ModelID>
 <a:ModelClassID>18112060-1A4B-11D1-83D9-444553540000</a:ModelClassID>
 </o:ModelDocument>
 </c:ModelsAndFiles>
