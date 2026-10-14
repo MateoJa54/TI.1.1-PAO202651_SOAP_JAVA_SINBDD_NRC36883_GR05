@@ -1,0 +1,1 @@
+﻿Dado que el presente proyecto no utiliza base de datos ni ninguna lógica de persistencia de datos (el catálogo de unidades, la credencial y los tokens se mantienen en memoria), no existe MER (Modelo Entidad-Relación).

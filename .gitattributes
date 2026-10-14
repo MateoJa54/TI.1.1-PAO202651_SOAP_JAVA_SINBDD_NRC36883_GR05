@@ -1,0 +1,15 @@
+# Git normaliza los finales de línea en archivos de texto.
+* text=auto
+
+# Los modelos de PowerDesigner son XML con su propia codificación y saltos
+# de línea: Git NO debe convertirlos (si lo hace, el archivo aparece
+# "modificado" en todas las PC y PowerDesigner puede quejarse).
+*.oom -text
+*.eam -text
+*.prj -text
+*.sws -text
+
+# Binarios
+*.png binary
+*.docx binary
+*.pptx binary

@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by XML-WS Runtime (https://github.com/eclipse-ee4j/metro-jax-ws). Runtime's version is Eclipse Metro/4.0.4.payara-p1 (FISH-10142-Metro-4.0.4-fa01c0b; 2025-07-11T17:44:37+0100) XMLWS-Impl/4.0.3 XMLWS-API/4.0.2 XMLB-Impl/4.0.5 XMLB-API/4.0.2 git-revision#fa01c0b. --><xs:schema xmlns:tns="http://ws.monster.edu.ec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ws.monster.edu.ec/">
+
+<xs:element name="autenticar" type="tns:autenticar"/>
+
+<xs:element name="autenticarResponse" type="tns:autenticarResponse"/>
+
+<xs:element name="convertir" type="tns:convertir"/>
+
+<xs:element name="convertirResponse" type="tns:convertirResponse"/>
+
+<xs:element name="obtenerCategorias" type="tns:obtenerCategorias"/>
+
+<xs:element name="obtenerCategoriasResponse" type="tns:obtenerCategoriasResponse"/>
+
+<xs:element name="obtenerUnidades" type="tns:obtenerUnidades"/>
+
+<xs:element name="obtenerUnidadesResponse" type="tns:obtenerUnidadesResponse"/>
+
+<xs:complexType name="autenticar">
+<xs:sequence>
+<xs:element name="usuario" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="autenticarResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:respuestaAutenticacion" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="respuestaAutenticacion">
+<xs:complexContent>
+<xs:extension base="tns:respuesta">
+<xs:sequence>
+<xs:element name="expiracion" type="xs:string" minOccurs="0"/>
+<xs:element name="token" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="respuesta" abstract="true">
+<xs:sequence>
+<xs:element name="codigo" type="xs:string" minOccurs="0"/>
+<xs:element name="estado" type="xs:string" minOccurs="0"/>
+<xs:element name="mensaje" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obtenerCategorias">
+<xs:sequence>
+<xs:element name="token" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obtenerCategoriasResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:respuestaCatalogo" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="respuestaCatalogo">
+<xs:complexContent>
+<xs:extension base="tns:respuesta">
+<xs:sequence>
+<xs:element name="categorias" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="obtenerUnidades">
+<xs:sequence>
+<xs:element name="token" type="xs:string" minOccurs="0"/>
+<xs:element name="categoria" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obtenerUnidadesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:respuestaUnidades" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="respuestaUnidades">
+<xs:complexContent>
+<xs:extension base="tns:respuesta">
+<xs:sequence>
+<xs:element name="categoria" type="xs:string" minOccurs="0"/>
+<xs:element name="unidades" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="convertir">
+<xs:sequence>
+<xs:element name="token" type="xs:string" minOccurs="0"/>
+<xs:element name="categoria" type="xs:string" minOccurs="0"/>
+<xs:element name="unidadOrigen" type="xs:string" minOccurs="0"/>
+<xs:element name="unidadDestino" type="xs:string" minOccurs="0"/>
+<xs:element name="valor" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="convertirResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:respuestaConversion" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="respuestaConversion">
+<xs:complexContent>
+<xs:extension base="tns:respuesta">
+<xs:sequence>
+<xs:element name="resultado" type="xs:double" minOccurs="0"/>
+<xs:element name="unidadDestino" type="xs:string" minOccurs="0"/>
+<xs:element name="unidadOrigen" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+</xs:schema>
