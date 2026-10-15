@@ -53,43 +53,56 @@ public final class MainActivity extends Activity {
         scroll.setFillViewport(true);
         contenido = new LinearLayout(this);
         contenido.setOrientation(LinearLayout.VERTICAL);
-        contenido.setPadding(dp(22), dp(24), dp(22), dp(28));
+        contenido.setPadding(dp(22), dp(14), dp(22), dp(18));
         contenido.setBackgroundColor(BG);
         scroll.addView(contenido);
 
-        LinearLayout brand = new LinearLayout(this);
-        brand.setGravity(Gravity.CENTER_VERTICAL);
-        brand.setOrientation(LinearLayout.HORIZONTAL);
-        ImageView mark = new ImageView(this);
-        boolean pantallaAcceso = "Hola de nuevo".equals(titulo);
-        mark.setImageResource(pantallaAcceso
-                ? ec.edu.monster.R.drawable.sully_boo
-                : ec.edu.monster.R.drawable.monster_mascot);
-        mark.setContentDescription(pantallaAcceso
-                ? "Sulley y Boo en la pantalla de acceso"
-                : "Mascota Monster del conversor");
-        mark.setScaleType(ImageView.ScaleType.FIT_CENTER);
-        LinearLayout.LayoutParams markLp = pantallaAcceso
-                ? new LinearLayout.LayoutParams(dp(92), dp(52))
-                : new LinearLayout.LayoutParams(dp(60), dp(82));
-        markLp.rightMargin = dp(12);
-        brand.addView(mark, markLp);
-        LinearLayout brandText = new LinearLayout(this);
-        brandText.setOrientation(LinearLayout.VERTICAL);
-        TextView brandName = label("MONSTER", 15, TEAL);
-        brandName.setTypeface(null, Typeface.BOLD);
-        TextView brandCaption = label("CONVERSOR DE UNIDADES", 10, MUTED);
-        brandCaption.setTypeface(null, Typeface.BOLD);
-        brandText.addView(brandName);
-        brandText.addView(brandCaption);
-        brand.addView(brandText);
-        contenido.addView(brand);
+        boolean pantallaAcceso = "Inicia sesión".equals(titulo);
+        if (pantallaAcceso) {
+            contenido.addView(new View(this), new LinearLayout.LayoutParams(1, 0, 0.5f));
+            ImageView hero = new ImageView(this);
+            hero.setImageResource(ec.edu.monster.R.drawable.sully_boo);
+            hero.setContentDescription("Sulley y Boo: bienvenida a CLIMOV");
+            hero.setScaleType(ImageView.ScaleType.CENTER_CROP);
+            hero.setBackground(shape(Color.WHITE, 22));
+            hero.setClipToOutline(true);
+            hero.setElevation(dp(3));
+            contenido.addView(hero, new LinearLayout.LayoutParams(-1, dp(170)));
+            TextView brand = label("MONSTER  ·  CONVERSOR DE UNIDADES", 12, TEAL);
+            brand.setTypeface(null, Typeface.BOLD);
+            brand.setGravity(Gravity.CENTER);
+            brand.setPadding(0, dp(14), 0, dp(3));
+            contenido.addView(brand);
+        } else {
+            LinearLayout brand = new LinearLayout(this);
+            brand.setGravity(Gravity.CENTER_VERTICAL);
+            brand.setOrientation(LinearLayout.HORIZONTAL);
+            ImageView mark = new ImageView(this);
+            mark.setImageResource(ec.edu.monster.R.drawable.monster_mascot);
+            mark.setContentDescription("Mascota Monster del conversor");
+            mark.setScaleType(ImageView.ScaleType.FIT_CENTER);
+            LinearLayout.LayoutParams markLp = new LinearLayout.LayoutParams(dp(60), dp(82));
+            markLp.rightMargin = dp(12);
+            brand.addView(mark, markLp);
+            LinearLayout brandText = new LinearLayout(this);
+            brandText.setOrientation(LinearLayout.VERTICAL);
+            TextView brandName = label("MONSTER", 15, TEAL);
+            brandName.setTypeface(null, Typeface.BOLD);
+            TextView brandCaption = label("CONVERSOR DE UNIDADES", 10, MUTED);
+            brandCaption.setTypeface(null, Typeface.BOLD);
+            brandText.addView(brandName);
+            brandText.addView(brandCaption);
+            brand.addView(brandText);
+            contenido.addView(brand);
+        }
 
-        TextView heading = label(titulo, 28, NAVY);
+        TextView heading = label(titulo, pantallaAcceso ? 29 : 28, NAVY);
         heading.setTypeface(null, Typeface.BOLD);
-        heading.setPadding(0, dp(24), 0, dp(4));
+        heading.setGravity(pantallaAcceso ? Gravity.CENTER : Gravity.START);
+        heading.setPadding(0, pantallaAcceso ? dp(12) : dp(24), 0, dp(4));
         contenido.addView(heading);
         TextView intro = label(subtitulo, 15, MUTED);
+        intro.setGravity(pantallaAcceso ? Gravity.CENTER : Gravity.START);
         intro.setPadding(0, 0, 0, dp(16));
         contenido.addView(intro);
         estado = label("", 13, Color.rgb(184, 49, 58));
@@ -98,10 +111,11 @@ public final class MainActivity extends Activity {
         setContentView(scroll);
     }
     private void mostrarLogin() {
-        prepararPantalla("Hola de nuevo", "Inicia sesión con las credenciales del servicio.");
+        prepararPantalla("Inicia sesión", "Convierte unidades de forma rápida y sencilla.");
         LinearLayout card = card();
+        card.setPadding(dp(20), dp(20), dp(20), dp(20));
         contenido.addView(card);
-        TextView cardTitle = label("Acceso", 20, NAVY);
+        TextView cardTitle = label("Acceso a tu cuenta", 19, NAVY);
         cardTitle.setTypeface(null, Typeface.BOLD);
         cardTitle.setPadding(0, 0, 0, dp(10));
         card.addView(cardTitle);
@@ -120,11 +134,31 @@ public final class MainActivity extends Activity {
             }, resultado -> { ocultarTeclado(); mostrarConversor(); });
         });
         LinearLayout.LayoutParams loginLp = new LinearLayout.LayoutParams(-1, dp(54));
-        loginLp.topMargin = dp(8);
+        loginLp.topMargin = dp(6);
         card.addView(login, loginLp);
-        TextView server = label("Servidor SOAP\n" + endpoint, 11, MUTED);
-        server.setPadding(dp(2), dp(18), dp(2), 0);
-        contenido.addView(server);
+        LinearLayout serverInfo = new LinearLayout(this);
+        serverInfo.setGravity(Gravity.CENTER_VERTICAL);
+        serverInfo.setPadding(dp(12), dp(10), dp(12), dp(10));
+        serverInfo.setBackground(shape(Color.WHITE, 15));
+        LinearLayout.LayoutParams serverLp = new LinearLayout.LayoutParams(-1, -2);
+        serverLp.topMargin = dp(14);
+        ImageView serverIcon = new ImageView(this);
+        serverIcon.setImageResource(ec.edu.monster.R.drawable.ic_cloud);
+        serverIcon.setContentDescription("Conexión con el servidor SOAP");
+        LinearLayout.LayoutParams serverIconLp = new LinearLayout.LayoutParams(dp(30), dp(30));
+        serverIconLp.rightMargin = dp(10);
+        serverInfo.addView(serverIcon, serverIconLp);
+        LinearLayout serverText = new LinearLayout(this);
+        serverText.setOrientation(LinearLayout.VERTICAL);
+        TextView serverTitle = label("Servidor SOAP", 12, NAVY);
+        serverTitle.setTypeface(null, Typeface.BOLD);
+        TextView serverAddress = label(endpoint, 10, MUTED);
+        serverAddress.setMaxLines(2);
+        serverText.addView(serverTitle);
+        serverText.addView(serverAddress);
+        serverInfo.addView(serverText, new LinearLayout.LayoutParams(0, -2, 1));
+        contenido.addView(serverInfo, serverLp);
+        contenido.addView(new View(this), new LinearLayout.LayoutParams(1, 0, 0.5f));
     }
     private void mostrarConversor() {
         prepararPantalla("Conversor", "Elige las unidades y convierte en segundos.");
@@ -245,6 +279,9 @@ public final class MainActivity extends Activity {
         input.setTextSize(16); input.setTextColor(INK); input.setHintTextColor(MUTED);
         input.setPadding(dp(14), dp(8), dp(14), dp(8));
         input.setBackground(shape(Color.rgb(247, 249, 252), 13));
+        input.setCompoundDrawablePadding(dp(10));
+        input.setCompoundDrawablesWithIntrinsicBounds(secret
+                ? ec.edu.monster.R.drawable.ic_lock : ec.edu.monster.R.drawable.ic_person, 0, 0, 0);
         if (secret) input.setInputType(129);
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(-1, dp(52));
         lp.bottomMargin = dp(12); input.setLayoutParams(lp); parent.addView(input); return input;
