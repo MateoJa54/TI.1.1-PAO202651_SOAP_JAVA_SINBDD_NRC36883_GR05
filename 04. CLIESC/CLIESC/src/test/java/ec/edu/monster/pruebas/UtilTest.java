@@ -2,27 +2,19 @@ package ec.edu.monster.pruebas;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import ec.edu.monster.modelo.Respuesta;
 import ec.edu.monster.modelo.RespuestaAutenticacion;
-import ec.edu.monster.modelo.RespuestaCatalogo;
-import ec.edu.monster.modelo.RespuestaConversion;
-import ec.edu.monster.modelo.RespuestaUnidades;
 import ec.edu.monster.modelo.SesionModelo;
-import ec.edu.monster.modelo.SolicitudConversion;
 import ec.edu.monster.util.NumeroUtil;
 import ec.edu.monster.util.RespuestaUtil;
-import java.util.List;
-import java.util.Optional;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
-class Extendido2Test {
+class UtilTest {
 
     @Test
     void testSesionVacia() {

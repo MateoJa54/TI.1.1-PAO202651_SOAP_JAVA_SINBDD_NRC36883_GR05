@@ -5,23 +5,13 @@
 <head>
     <meta charset='UTF-8'>
     <title>Catálogo - Conversor de Unidades Monster</title>
-    <style>
-        * { box-sizing: border-box; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; }
-        body { background: #ffffff; color: #1f2937; }
-        .card { background: #ffffff; border: 1px solid #e3e7ee; border-radius: 14px; margin: 0; }
-        table { width: 100%; border-collapse: collapse; }
-        th { text-align: left; padding: 10px 16px; border-bottom: 1px solid #e3e7ee; color: #6b7280; font-weight: 500; }
-        td { padding: 10px 16px; border-bottom: 1px solid #eef1f6; }
-        tr:nth-child(even) td { background: #f8fafc; }
-        .no-data { padding: 20px; color: #6b7280; text-align: center; }
-        .header-row { background: #f8fafc; }
-    </style>
+    <link rel='stylesheet' href='css/app.css'>
 </head>
-<body>
-    <div class='card'>
-        <table>
+<body style='background: transparent;'>
+    <div class='panel' style='box-shadow: none; border: 0; padding: 0;'>
+        <table class='table'>
             <thead>
-                <tr class='header-row'>
+                <tr>
                     <th>Categoría</th>
                     <th>Unidades</th>
                 </tr>
@@ -29,14 +19,21 @@
             <tbody>
                 <c:forEach var='entry' items='${datos}'>
                     <tr>
-                        <td style='font-weight: 600;'>${entry.key}</td>
-                        <td style='color: #6b7280;'>${entry.value}</td>
+                        <td class='cat'><c:out value='${entry.key}'/></td>
+                        <td><c:out value='${entry.value}'/></td>
                     </tr>
                 </c:forEach>
             </tbody>
         </table>
         <c:if test='${empty datos}'>
-            <p class='no-data'>No hay categorías registradas en el servidor.</p>
+            <div class='empty'>
+                <svg width='22' height='22' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'>
+                    <path d='M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z'></path>
+                    <line x1='12' y1='9' x2='12' y2='13'></line>
+                    <line x1='12' y1='17' x2='12.01' y2='17'></line>
+                </svg>
+                <div>No hay categorías registradas en el servidor.</div>
+            </div>
         </c:if>
     </div>
 </body>

@@ -19,6 +19,7 @@ public class ConversionServlet extends HttpServlet {
             response.sendRedirect("index.jsp");
             return;
         }
-        request.getRequestDispatcher("conversion.jsp").forward(request, response);
+        session.setAttribute("active_tab", "conversion");
+        response.sendRedirect("menu.jsp");
     }
 }

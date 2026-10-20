@@ -152,6 +152,61 @@ public final class Iconos {
         });
     }
 
+    /** Candado cerrado: campo de contraseña. */
+    public static Icon candado(int tam, Color color) {
+        return vectorial(tam, color, (g, lado) -> {
+            double anchoCuerpo = lado * 0.56;
+            double altoCuerpo = lado * 0.4;
+            double xCuerpo = (lado - anchoCuerpo) / 2.0;
+            double yCuerpo = lado * 0.5;
+            double radioAro = lado * 0.2;
+            double centroX = lado / 2.0;
+            double yBase = yCuerpo + radioAro * 0.55;
+            g.draw(new Arc2D.Double(centroX - radioAro, yBase - radioAro * 2,
+                    radioAro * 2, radioAro * 2, 0, 180, Arc2D.OPEN));
+            g.draw(new Line2D.Double(centroX - radioAro, yBase, centroX - radioAro, yCuerpo + 2));
+            g.draw(new Line2D.Double(centroX + radioAro, yBase, centroX + radioAro, yCuerpo + 2));
+            g.draw(new RoundRectangle2D.Double(xCuerpo, yCuerpo, anchoCuerpo, altoCuerpo,
+                    lado * 0.14, lado * 0.14));
+        });
+    }
+
+    /** Dos hojas superpuestas: copiar al portapapeles. */
+    public static Icon copiar(int tam, Color color) {
+        return vectorial(tam, color, (g, lado) -> {
+            double m = lado * 0.24;
+            double w = lado * 0.46;
+            double h = lado * 0.52;
+            double arco = lado * 0.1;
+            g.draw(new RoundRectangle2D.Double(m, m + lado * 0.1, w, h, arco, arco));
+            g.draw(new RoundRectangle2D.Double(lado - m - w, lado - m - h - lado * 0.1, w, h, arco, arco));
+        });
+    }
+
+    /** Palomita: operación exitosa / copiado. */
+    public static Icon exito(int tam, Color color) {
+        return vectorial(tam, color, (g, lado) -> {
+            g.draw(new Line2D.Double(lado * 0.2, lado * 0.54, lado * 0.43, lado * 0.76));
+            g.draw(new Line2D.Double(lado * 0.43, lado * 0.76, lado * 0.8, lado * 0.26));
+        });
+    }
+
+    /** Triángulo con signo de exclamación: avisos y validación. */
+    public static Icon aviso(int tam, Color color) {
+        return vectorial(tam, color, (g, lado) -> {
+            double puntaX = lado / 2.0;
+            double baseY = lado * 0.84;
+            double margen = lado * 0.1;
+            g.draw(new Line2D.Double(puntaX, lado * 0.14, lado - margen, baseY));
+            g.draw(new Line2D.Double(lado - margen, baseY, margen, baseY));
+            g.draw(new Line2D.Double(margen, baseY, puntaX, lado * 0.14));
+            double y = lado * 0.4;
+            g.draw(new Line2D.Double(puntaX, y, puntaX, lado * 0.62));
+            double r = Math.max(1.2, lado * 0.055);
+            g.fill(new Ellipse2D.Double(puntaX - r, lado * 0.71 - r, r * 2, r * 2));
+        });
+    }
+
     // ---------- infraestructura ----------
 
     /** Traza una flecha con punta en el extremo (x2, y2). */

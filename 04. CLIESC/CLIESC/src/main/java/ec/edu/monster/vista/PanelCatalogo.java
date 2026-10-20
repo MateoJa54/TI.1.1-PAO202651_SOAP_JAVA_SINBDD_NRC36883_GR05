@@ -8,6 +8,9 @@ import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Font;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Insets;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.BorderFactory;
@@ -17,6 +20,7 @@ import javax.swing.JButton;
 import javax.swing.JComponent;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JProgressBar;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JViewport;
@@ -38,6 +42,8 @@ public class PanelCatalogo extends PanelTarjeta {
     private final JTable tabla;
     private final JScrollPane scroll;
     private final JLabel vacio;
+    private final JPanel panelVacio;
+    private final JProgressBar progresoCarga = Tema.barraProgreso();
     private final JButton actualizar;
     private boolean consultado;
 
@@ -53,7 +59,9 @@ public class PanelCatalogo extends PanelTarjeta {
         };
         this.tabla = crearTabla();
         this.scroll = new JScrollPane(tabla);
-        this.vacio = crearVacio();
+        this.vacio = Tema.etiqueta("", Tema.FUENTE, Tema.TEXTO_SECUNDARIO);
+        this.vacio.setHorizontalAlignment(JLabel.CENTER);
+        this.panelVacio = crearPanelVacio();
         this.actualizar = Tema.botonSecundario("Actualizar", Iconos.refrescar(16, Tema.TEXTO));
         construir();
         actualizar.addActionListener(e -> cargar());
@@ -89,13 +97,29 @@ public class PanelCatalogo extends PanelTarjeta {
         return t;
     }
 
-    private JLabel crearVacio() {
-        JLabel etiqueta = Tema.etiqueta("No hay categorías registradas en el servidor.",
-                Tema.FUENTE, Tema.TEXTO_SECUNDARIO);
-        etiqueta.setHorizontalAlignment(JLabel.CENTER);
-        etiqueta.setOpaque(true);
-        etiqueta.setBackground(Tema.SUPERFICIE);
-        return etiqueta;
+    /** Estado vacío / de carga: icono, mensaje y barra de progreso discreta. */
+    private JPanel crearPanelVacio() {
+        JPanel panel = new JPanel(new GridBagLayout());
+        panel.setBackground(Tema.SUPERFICIE);
+        GridBagConstraints c = new GridBagConstraints();
+        c.gridx = 0;
+        c.gridy = 0;
+        c.anchor = GridBagConstraints.CENTER;
+        JLabel icono = new JLabel(Iconos.catalogo(30, Tema.TEXTO_TENUE));
+        icono.setHorizontalAlignment(JLabel.CENTER);
+        panel.add(icono, c);
+
+        c.gridy = 1;
+        c.insets = new Insets(12, 24, 0, 24);
+        panel.add(vacio, c);
+
+        c.gridy = 2;
+        c.insets = new Insets(14, 0, 0, 0);
+        c.fill = GridBagConstraints.HORIZONTAL;
+        c.weightx = 1;
+        progresoCarga.setVisible(false);
+        panel.add(progresoCarga, c);
+        return panel;
     }
 
     private void construir() {
@@ -113,13 +137,13 @@ public class PanelCatalogo extends PanelTarjeta {
     }
 
     private JComponent encabezado() {
-        JPanel fila = new JPanel(new BorderLayout());
+        JPanel fila = new JPanel(new BorderLayout(16, 0));
         fila.setOpaque(false);
 
         JPanel textos = new JPanel();
         textos.setOpaque(false);
         textos.setLayout(new BoxLayout(textos, BoxLayout.Y_AXIS));
-        JLabel titulo = Tema.etiqueta("Catálogo de unidades", Tema.ENCABEZADO, Tema.TEXTO);
+        JLabel titulo = Tema.etiqueta("Catálogo de unidades", Tema.ENCABEZADO, Tema.NAVY);
         JLabel subtitulo = Tema.etiqueta("Categorías y unidades disponibles en el servidor",
                 Tema.PEQUENA, Tema.TEXTO_SECUNDARIO);
         titulo.setAlignmentX(LEFT_ALIGNMENT);
@@ -128,6 +152,11 @@ public class PanelCatalogo extends PanelTarjeta {
         textos.add(Box.createVerticalStrut(2));
         textos.add(subtitulo);
         fila.add(textos, BorderLayout.WEST);
+
+        JPanel derecha = new JPanel(new FlowLayout(FlowLayout.RIGHT, 0, 12));
+        derecha.setOpaque(false);
+        derecha.add(actualizar);
+        fila.add(derecha, BorderLayout.EAST);
         return fila;
     }
 
@@ -141,7 +170,7 @@ public class PanelCatalogo extends PanelTarjeta {
     public void cargar() {
         consultado = true;
         actualizar.setEnabled(false);
-        mostrarVacio("Consultando al servidor…");
+        mostrarVacio("Consultando al servidor…", true);
         TareaAsincrona.ejecutar(this, this::consultar, this::mostrar, causa -> {
             actualizar.setEnabled(true);
             TareaAsincrona.mostrarFallo(this, causa);
@@ -178,7 +207,7 @@ public class PanelCatalogo extends PanelTarjeta {
             modelo.addRow(fila);
         }
         if (modelo.getRowCount() == 0) {
-            mostrarVacio(datos.aviso());
+            mostrarVacio(datos.aviso(), false);
         } else {
             scroll.setViewportView(tabla);
         }
@@ -187,9 +216,10 @@ public class PanelCatalogo extends PanelTarjeta {
         }
     }
 
-    private void mostrarVacio(String mensaje) {
+    private void mostrarVacio(String mensaje, boolean cargando) {
         vacio.setText(mensaje);
-        scroll.setViewportView(vacio);
+        progresoCarga.setVisible(cargando);
+        scroll.setViewportView(panelVacio);
     }
 
     /** Filas y mensaje para cuando no hay datos. */
@@ -213,7 +243,7 @@ public class PanelCatalogo extends PanelTarjeta {
                 setForeground(Tema.TEXTO);
             } else {
                 setBackground(fila % 2 == 0 ? Tema.SUPERFICIE : Tema.SUPERFICIE_ALTERNA);
-                setForeground(primera ? Tema.TEXTO : Tema.TEXTO_SECUNDARIO);
+                setForeground(primera ? Tema.NAVY : Tema.TEXTO_SECUNDARIO);
             }
             setOpaque(true);
             return this;

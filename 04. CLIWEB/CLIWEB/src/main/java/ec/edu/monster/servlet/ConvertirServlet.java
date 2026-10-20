@@ -50,7 +50,7 @@ public class ConvertirServlet extends HttpServlet {
         
         Optional<Double> n = NumeroUtil.interpretarDecimal(valor);
         if (n.isEmpty()) {
-            session.setAttribute("conversion_error", "Valor no válido");
+            session.setAttribute("conversion_error", "Valor no válido. Escriba un número, por ejemplo 12.5");
             response.sendRedirect("menu.jsp");
             return;
         }
@@ -58,9 +58,11 @@ public class ConvertirServlet extends HttpServlet {
         SolicitudConversion s = new SolicitudConversion(categoria, origen, destino, n.get());
         RespuestaConversion r = ctrl.convertir(s);
         if (r != null && "OK".equals(r.getEstado()) && r.getResultado() != null) {
-            String res = NumeroUtil.formatear(n.get()) + " " + r.getUnidadOrigen() + " = "
+            String res = NumeroUtil.formatear(r.getResultado()) + " " + r.getUnidadDestino();
+            String equiv = NumeroUtil.formatear(n.get()) + " " + r.getUnidadOrigen() + " = "
                     + NumeroUtil.formatear(r.getResultado()) + " " + r.getUnidadDestino();
             session.setAttribute("conversion_resultado", res);
+            session.setAttribute("conversion_equiv", equiv);
         } else {
             String msg = (r == null) ? "Error" : (r.getMensaje() != null ? r.getMensaje() : r.getCodigo());
             session.setAttribute("conversion_error", msg);

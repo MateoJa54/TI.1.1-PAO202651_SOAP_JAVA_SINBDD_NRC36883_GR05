@@ -46,9 +46,9 @@ public class VentanaPrincipal extends JFrame implements MediadorEscritorio {
         contenedor.add(panelMenu, TARJETA_MENU);
         setContentPane(contenedor);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setMinimumSize(new Dimension(820, 580));
+        setMinimumSize(new Dimension(880, 620));
         pack();
-        setSize(Math.max(getWidth(), 960), Math.max(getHeight(), 660));
+        setSize(Math.max(getWidth(), 1000), Math.max(getHeight(), 700));
         setLocationRelativeTo(null);
         mostrarAcceso();
     }
