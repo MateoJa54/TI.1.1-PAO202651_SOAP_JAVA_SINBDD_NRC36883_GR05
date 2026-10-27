@@ -6,184 +6,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conversor de Unidades Monster - Cliente Web</title>
-    <style>
-        * { box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; }
-        body { background: #f4f6fa; color: #1f2937; min-height: 100vh; }
-        
-        .app-bar {
-            background: #ffffff;
-            border-bottom: 1px solid #e3e7ee;
-            padding: 12px 22px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        
-        .brand-text {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .brand-title {
-            font-size: 18px;
-            font-weight: 600;
-            color: #1f2937;
-        }
-        
-        .brand-subtitle {
-            font-size: 12px;
-            color: #6b7280;
-        }
-        
-        .actions {
-            display: flex;
-            gap: 8px;
-        }
-        
-        .btn {
-            padding: 8px 16px;
-            border: 1px solid #d1d5db;
-            border-radius: 6px;
-            background: #ffffff;
-            color: #6b7280;
-            cursor: pointer;
-            font-size: 14px;
-            transition: all 0.2s;
-        }
-        
-        .btn:hover {
-            background: #f9fafb;
-            color: #1f2937;
-        }
-        
-        .btn-primary {
-            background: #2563eb;
-            color: white;
-            border: none;
-        }
-        
-        .btn-primary:hover {
-            background: #1d4ed8;
-        }
-        
-        .tabs {
-            background: #ffffff;
-            border-bottom: 1px solid #e3e7ee;
-            padding: 0 22px;
-        }
-        
-        .tab-buttons {
-            display: flex;
-            gap: 0;
-        }
-        
-        .tab-btn {
-            padding: 12px 16px;
-            background: none;
-            border: none;
-            border-bottom: 2px solid transparent;
-            color: #6b7280;
-            cursor: pointer;
-            font-size: 14px;
-            font-weight: 500;
-            transition: all 0.2s;
-        }
-        
-        .tab-btn:hover {
-            color: #1f2937;
-            background: #f9fafb;
-        }
-        
-        .tab-btn.active {
-            color: #2563eb;
-            border-bottom-color: #2563eb;
-        }
-        
-        .tab-content {
-            padding: 20px 22px;
-            display: none;
-        }
-        
-        .tab-content.active {
-            display: block;
-        }
-        
-        .card {
-            background: #ffffff;
-            border: 1px solid #e3e7ee;
-            border-radius: 14px;
-            padding: 20px;
-        }
-        
-        .card-header {
-            margin-bottom: 20px;
-        }
-        
-        .card-title {
-            font-size: 20px;
-            font-weight: 600;
-            color: #1f2937;
-            margin-bottom: 4px;
-        }
-        
-        .card-subtitle {
-            font-size: 13px;
-            color: #6b7280;
-        }
-    </style>
+    <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
-    <div class="app-bar">
-        <div class="brand">
-            <div class="brand-text">
+    <header class="topbar">
+        <div class="topbar-brand">
+            <div class="brand-tile">
+                <img src="img/marca.svg" alt="Monster" width="38" height="38">
+            </div>
+            <div>
                 <div class="brand-title">Conversor de Unidades</div>
-                <div class="brand-subtitle">Cliente web</div>
+                <div class="brand-sub">MONSTER · Cliente web</div>
             </div>
         </div>
-        <div class="actions">
+        <div class="topbar-tools">
+            <c:if test="${not empty sessionScope.usuario}">
+                <span class="chip">
+                    <span class="dot"></span>
+                    Conectado como <strong><c:out value="${sessionScope.usuario}"/></strong>
+                </span>
+            </c:if>
             <form action="logout" method="post" style="display: inline;">
-                <button type="submit" class="btn">Cerrar sesión</button>
+                <button type="submit" class="btn btn-ghost-light">Cerrar sesión</button>
             </form>
         </div>
-    </div>
+    </header>
+
+    <nav class="tabs">
+        <button type="button" class="tab active" id="tab-catalogo" onclick="showTab('catalogo')">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="8" y1="6" x2="21" y2="6"></line>
+                <line x1="8" y1="12" x2="21" y2="12"></line>
+                <line x1="8" y1="18" x2="21" y2="18"></line>
+                <circle cx="4" cy="6" r="1"></circle>
+                <circle cx="4" cy="12" r="1"></circle>
+                <circle cx="4" cy="18" r="1"></circle>
+            </svg>
+            Catálogo
+        </button>
+        <button type="button" class="tab" id="tab-conversion" onclick="showTab('conversion')">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="16 3 21 3 21 8"></polyline>
+                <line x1="4" y1="20" x2="21" y2="3"></line>
+                <polyline points="21 16 21 21 16 21"></polyline>
+                <line x1="15" y1="15" x2="21" y2="21"></line>
+                <line x1="4" y1="4" x2="9" y2="9"></line>
+            </svg>
+            Conversión
+        </button>
+    </nav>
     
-    <div class="tabs">
-        <div class="tab-buttons">
-            <button class="tab-btn active" onclick="showTab('catalogo')">Catálogo</button>
-            <button class="tab-btn" onclick="showTab('conversion')">Conversión</button>
-        </div>
-    </div>
-    
-    <div id="catalogo" class="tab-content active">
-        <div class="card">
-            <div class="card-header">
-                <div class="card-title">Catálogo de unidades</div>
-                <div class="card-subtitle">Categorías y unidades disponibles en el servidor</div>
+    <main id="catalogo" class="content active">
+        <section class="panel">
+            <div class="panel-head">
+                <div>
+                    <div class="panel-title">Catálogo de unidades</div>
+                    <div class="panel-sub">Categorías y unidades disponibles en el servidor</div>
+                </div>
+                <div class="panel-head-actions">
+                    <button type="button" class="btn" onclick="loadCatalogo()">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <polyline points="23 4 23 10 17 10"></polyline>
+                            <polyline points="1 20 1 14 7 14"></polyline>
+                            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                        </svg>
+                        Actualizar
+                    </button>
+                </div>
             </div>
             <div id="catalogo-content">
-                <p style="color: #6b7280; text-align: center; padding: 40px;">Cargando catálogo...</p>
+                <div class="empty">
+                    <div class="progress"></div>
+                    <div>Cargando catálogo...</div>
+                </div>
             </div>
-        </div>
-    </div>
-    
-    <div id="conversion" class="tab-content">
-        <div class="card">
-            <div class="card-header">
-                <div class="card-title">Conversión de unidades</div>
-                <div class="card-subtitle">Elija la categoría, las unidades y escriba el valor a convertir</div>
+        </section>
+    </main>
+
+    <main id="conversion" class="content">
+        <section class="panel">
+            <div class="panel-head">
+                <div>
+                    <div class="panel-title">Conversión de unidades</div>
+                    <div class="panel-sub">Elija la categoría, las unidades y escriba el valor a convertir</div>
+                </div>
             </div>
             <div id="conversion-content">
                 <jsp:include page="conversion.jsp" />
             </div>
-            <div id="conversion-result" style="display: none;"></div>
-        </div>
-    </div>
+        </section>
+    </main>
     
     <script>
         window.categoriasData = {};
@@ -223,12 +135,17 @@
         }
         
         function showTab(tabId) {
-            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
-            
-            event.target.classList.add('active');
+            document.querySelectorAll('.tab').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.content').forEach(content => content.classList.remove('active'));
+
+            if (event && event.target) {
+                event.target.classList.add('active');
+            } else {
+                const btn = document.getElementById('tab-' + tabId);
+                if (btn) btn.classList.add('active');
+            }
             document.getElementById(tabId).classList.add('active');
-            
+
             if (tabId === 'catalogo') {
                 loadCatalogo();
             } else if (tabId === 'conversion') {
@@ -262,7 +179,7 @@
                 })
                 .catch(error => {
                     console.error('Error al cargar el catálogo:', error);
-                    content.innerHTML = '<p style="color: #dc2626; text-align: center; padding: 40px;">Error al cargar el catálogo</p>';
+                    content.innerHTML = '<div class="empty"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg><div>Error al cargar el catálogo</div></div>';
                 });
         }
         
@@ -316,31 +233,60 @@
 
             return categoriasPromise;
         }
+
+        function copiarResultado(btn) {
+            const card = btn.closest('.result');
+            const valueEl = card ? card.querySelector('.result-value') : null;
+            const texto = valueEl ? valueEl.textContent.trim() : '';
+            if (!texto) return;
+            const confirmar = () => {
+                const original = btn.innerHTML;
+                btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+                setTimeout(() => { btn.innerHTML = original; }, 1200);
+            };
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(texto).then(confirmar).catch(() => {});
+            } else {
+                const ta = document.createElement('textarea');
+                ta.value = texto;
+                ta.style.position = 'fixed';
+                ta.style.opacity = '0';
+                document.body.appendChild(ta);
+                ta.select();
+                try { document.execCommand('copy'); confirmar(); } catch (e) {}
+                document.body.removeChild(ta);
+            }
+        }
         
-        // Cargar catálogo al inicio
-        document.addEventListener('DOMContentLoaded', function() {
-            loadCatalogo();
-            
-            // Cambiar a la pestaña activa si existe
-            <c:if test='${not empty sessionScope.active_tab}'>
-                const activeTab = '${sessionScope.active_tab}';
-                const tabButtons = document.querySelectorAll('.tab-btn');
-                const tabContents = document.querySelectorAll('.tab-content');
-                
-                tabButtons.forEach(btn => btn.classList.remove('active'));
-                tabContents.forEach(content => content.classList.remove('active'));
-                
-                if (activeTab === 'conversion') {
-                    document.getElementById('conversion').classList.add('active');
-                    tabButtons[1].classList.add('active');
-                    loadCategoriasForConversion();
-                } else {
-                    document.getElementById('catalogo').classList.add('active');
-                    tabButtons[0].classList.add('active');
-                }
-                
-                <c:remove var="active_tab" scope="session" />
-            </c:if>
+            // Cargar catálogo al inicio
+            document.addEventListener('DOMContentLoaded', function() {
+                <c:choose>
+                    <c:when test='${not empty sessionScope.active_tab and sessionScope.active_tab eq "conversion"}'>
+                        // defer
+                    </c:when>
+                    <c:otherwise>
+                        loadCatalogo();
+                    </c:otherwise>
+                </c:choose>
+
+                // Cambiar a la pestaña activa si existe
+                <c:if test='${not empty sessionScope.active_tab}'>
+                    const activeTab = '${sessionScope.active_tab}';
+                    document.querySelectorAll('.tab').forEach(btn => btn.classList.remove('active'));
+                    document.querySelectorAll('.content').forEach(content => content.classList.remove('active'));
+                    if (activeTab === 'conversion') {
+                        document.getElementById('conversion').classList.add('active');
+                        const btnConv = document.getElementById('tab-conversion');
+                        if (btnConv) btnConv.classList.add('active');
+                        loadCategoriasForConversion();
+                    } else {
+                        document.getElementById('catalogo').classList.add('active');
+                        const btnCat = document.getElementById('tab-catalogo');
+                        if (btnCat) btnCat.classList.add('active');
+                        loadCatalogo();
+                    }
+                    <c:remove var="active_tab" scope="session" />
+                </c:if>
             
             // Restaurar valores seleccionados si existen
             <c:if test='${not empty sessionScope.conversion_categoria}'>
@@ -370,17 +316,33 @@
             
             // Mostrar resultado de conversión si existe
             <c:if test='${not empty sessionScope.conversion_resultado}'>
-                const resultDiv = document.getElementById('conversion-result');
-                resultDiv.style.display = 'block';
-                resultDiv.innerHTML = '<div style="background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 14px; padding: 20px; margin-top: 22px; text-align: center;"><div style="color: #059669; font-size: 18px; font-weight: 600;">${sessionScope.conversion_resultado}</div></div>';
+                const resultDivOk = document.getElementById('conversion-result');
+                if (resultDivOk) {
+                    resultDivOk.className = 'result result--ok';
+                    resultDivOk.innerHTML = '<div class="result-top">'
+                        + '<div class="result-label">RESULTADO</div>'
+                        + '<button type="button" class="btn btn-copy" title="Copiar resultado" aria-label="Copiar resultado" onclick="copiarResultado(this)">'
+                        + '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">'
+                        + '<rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>'
+                        + '<path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>'
+                        + '</svg>'
+                        + '</button>'
+                        + '</div>'
+                        + '<div class="result-value"><c:out value="${sessionScope.conversion_resultado}"/></div>'
+                        + '<div class="result-eq"><c:out value="${sessionScope.conversion_equiv}"/></div>';
+                }
                 <c:remove var="conversion_resultado" scope="session" />
+                <c:remove var="conversion_equiv" scope="session" />
             </c:if>
-            
+
             // Mostrar error de conversión si existe
             <c:if test='${not empty sessionScope.conversion_error}'>
-                const resultDiv = document.getElementById('conversion-result');
-                resultDiv.style.display = 'block';
-                resultDiv.innerHTML = '<div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 14px; padding: 20px; margin-top: 22px; text-align: center;"><div style="color: #dc2626; font-size: 16px;">${sessionScope.conversion_error}</div></div>';
+                const resultDivErr = document.getElementById('conversion-result');
+                if (resultDivErr) {
+                    resultDivErr.className = 'result result--error';
+                    resultDivErr.innerHTML = '<div class="result-label">AVISO</div>'
+                        + '<div class="result-value"><c:out value="${sessionScope.conversion_error}"/></div>';
+                }
                 <c:remove var="conversion_error" scope="session" />
             </c:if>
         });

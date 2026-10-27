@@ -52,9 +52,8 @@ ec.edu.monster
 - `conversion.jsp` - Vista de conversión (incluida en menu.jsp)
 
 ## Diseño
-El diseño del cliente web sigue el mismo estilo visual que el cliente de escritorio:
-- Colores: fondo claro (#f4f6fa), superficies blancas, texto principal (#1f2937), secundario (#6b7280)
-- Barra superior con marca y botón de cerrar sesión
-- Pestañas para navegar entre Catálogo y Conversión
-- Tarjetas con bordes redondeados (14px)
-- Botones con estados hover y transiciones suaves
+El diseño del cliente web ha sido portado desde el cliente de escritorio (CLIESC), manteniendo la misma identidad visual:
+- Paleta coherente: `#133049` (navy), `#2563EB` (primario), `#0F8591`/`#3DBECC` (marca), `#F3F7FB` (fondo), `#1F3142` (texto), con tarjetas blancas y bordes `#E4EAF2`.
+- Pantalla de login dividida: barra lateral navy con el título y la mascota (`img/Monster.png`) + tarjeta de formulario.
+- Barra superior navy con marca (logo SVG), chip de usuario conectado y botón de cerrar sesión.
+- Estilos centralizados en `src/main/webapp/css/app.css`. Logo vectorial en `src/main/webapp/img/marca.svg` y mascota en `src/main/webapp/img/Monster.png`.

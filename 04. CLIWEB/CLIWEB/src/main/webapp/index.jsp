@@ -1,31 +1,67 @@
 ﻿<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conversor de Unidades Monster - Cliente Web</title>
-    <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 20px; background: linear-gradient(135deg, #f4f6fa 0%, #e8eef8 100%); min-height: 100vh; }
-        .card { border: 1px solid #e3e7ee; padding: 30px; margin: 60px auto; border-radius: 12px; background: white; max-width: 500px; box-shadow: 0 8px 24px rgba(15,23,42,0.08); }
-        h1 { text-align: center; color: #1f2937; margin-bottom: 30px; }
-        input[type=text], input[type=password] { width: 100%; padding: 10px; margin-top: 8px; border: 1px solid #d1d5db; border-radius: 6px; box-sizing: border-box; }
-        input[type=submit] { background: #2563eb; color: white; padding: 12px 20px; border: none; border-radius: 6px; cursor: pointer; width: 100%; font-weight: 600; }
-        input[type=submit]:hover { background: #1d4ed8; }
-        .error { color: #b91c1c; text-align: center; }
-    </style>
+    <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
-    <div class="card">
-        <h1>Conversor de Unidades</h1>
-        <form action="login" method="post">
-            <label>Usuario</label><br>
-            <input type="text" name="usuario" placeholder="Ingrese su usuario" required><br><br>
-            <label>Contraseña</label><br>
-            <input type="password" name="password" placeholder="Ingrese su contraseña" required><br><br>
-            <input type="submit" value="Iniciar Sesión">
-        </form>
-        <c:if test="${not empty requestScope.error}">
-            <p class="error"><c:out value="${requestScope.error}"/></p>
-        </c:if>
-    </div>
+    <main class="login">
+        <aside class="login-brand">
+            <h1 class="brand-name">Conversor de Unidades</h1>
+            <div class="brand-figure">
+                <img src="img/Monster.png" alt="Monster">
+            </div>
+        </aside>
+
+        <section class="login-main">
+            <div class="login-col">
+                <div class="login-inline-logo">
+                    <img src="img/Monster.png" alt="Monster">
+                    <div class="brand-name">Conversor de Unidades</div>
+                </div>
+
+                <div class="card">
+                    <div class="card-head">
+                        <div class="card-title">Iniciar sesión</div>
+                        <div class="card-sub">Use sus credenciales para acceder al cliente web</div>
+                    </div>
+
+                    <form action="login" method="post">
+                        <div class="field">
+                            <label for="usuario">Usuario</label>
+                            <input type="text" id="usuario" name="usuario" class="input" placeholder="Ingrese su usuario" required autocomplete="username">
+                        </div>
+
+                        <div class="field">
+                            <label for="password">Contraseña</label>
+                            <input type="password" id="password" name="password" class="input" placeholder="Ingrese su contraseña" required autocomplete="current-password">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">Iniciar sesión</button>
+                    </form>
+
+                    <c:if test="${not empty requestScope.error}">
+                        <div class="alert alert-error">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                                <line x1="12" y1="9" x2="12" y2="13"></line>
+                                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                            </svg>
+                            <div><c:out value="${requestScope.error}"/></div>
+                        </div>
+                    </c:if>
+                </div>
+
+                <div class="server-box">
+                    <div class="k">Servidor SOAP</div>
+                    <div class="v">http://localhost:8080/WSCOMSERVIDOR/WSConversorUnidades</div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
