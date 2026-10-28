@@ -12,7 +12,7 @@ consola, escritorio, web y móvil.
 ## Cómo ejecutarlo
 
 1. Abrir en NetBeans la carpeta `WSCOMSERVIDOR` (File > Open Project).
-2. Clic derecho en el proyecto > **Clean and Build** (corre las 226 pruebas).
+2. Clic derecho en el proyecto > **Clean and Build** (corre las 342 pruebas).
 3. Clic derecho > **Run** y elegir el servidor Payara.
 4. Comprobar en el navegador: <http://localhost:8080/WSCOMSERVIDOR/>
 

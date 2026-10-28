@@ -15,7 +15,7 @@ Programa de consola que consume el servicio SOAP `WSCOMSERVIDOR`.
 3. Clic derecho en el proyecto > **Run** (o F6). El programa se usa en la ventana Output.
 4. Usuario y contraseña de desarrollo: `monster` / `monster2026`.
 
-**Clean and Build** corre las 273 pruebas; no necesitan el servidor encendido.
+**Clean and Build** corre las 318 pruebas; no necesitan el servidor encendido.
 
 ## Cambiar la dirección del servidor
 
