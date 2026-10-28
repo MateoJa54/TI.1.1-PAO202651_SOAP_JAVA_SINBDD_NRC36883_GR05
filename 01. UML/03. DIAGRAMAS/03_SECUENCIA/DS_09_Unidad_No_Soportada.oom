@@ -2365,7 +2365,7 @@ DISPNAME 0 Arial,8,U</a:FontList>
 </o:Message>
 <o:Message Id="o44">
 <a:ObjectID>B3B4B55D-4FB7-4E4A-8CCB-D5BA4A034685</a:ObjectID>
-<a:Name>10. validar(solicitud)</a:Name>
+<a:Name>10. resolver(solicitud)</a:Name>
 <a:Code>Message_10</a:Code>
 <a:CreationDate>1792016846</a:CreationDate>
 <a:Creator>mateo</a:Creator>
@@ -2381,7 +2381,7 @@ DISPNAME 0 Arial,8,U</a:FontList>
 </o:Message>
 <o:Message Id="o42">
 <a:ObjectID>BF262BFC-188D-4D4C-B763-05EB3203FE7C</a:ObjectID>
-<a:Name>11. existeCategoria(categoria)</a:Name>
+<a:Name>11. buscarCategoria(categoria)</a:Name>
 <a:Code>Message_11</a:Code>
 <a:CreationDate>1792016846</a:CreationDate>
 <a:Creator>mateo</a:Creator>

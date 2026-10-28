@@ -28,6 +28,7 @@ public class LoginServlet extends HttpServlet {
             RespuestaAutenticacion respuesta = login.autenticar(usuario, password);
             if (login.haySesionActiva()) {
                 session.setAttribute("token", sesion.getToken());
+                session.setAttribute("usuario", usuario);
                 session.setAttribute("expiracion", sesion.getExpiracion());
                 response.sendRedirect("menu.jsp");
             } else {

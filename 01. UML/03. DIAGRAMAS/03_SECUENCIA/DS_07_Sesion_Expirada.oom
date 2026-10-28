@@ -2148,7 +2148,7 @@ DISPNAME 0 Arial,8,U</a:FontList>
 </o:Message>
 <o:Message Id="o36">
 <a:ObjectID>A4305746-C6DE-4213-8C0B-E73DF15BF114</a:ObjectID>
-<a:Name>8. eliminarToken(token) por vencimiento</a:Name>
+<a:Name>8. eliminar token vencido (tokens.remove)</a:Name>
 <a:Code>Message_8</a:Code>
 <a:CreationDate>1792016843</a:CreationDate>
 <a:Creator>mateo</a:Creator>
