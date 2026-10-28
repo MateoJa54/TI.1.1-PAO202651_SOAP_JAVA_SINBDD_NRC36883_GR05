@@ -213,8 +213,8 @@ El cliente de escritorio (`04. CLIESC`) sirve como referencia de diseño visual 
 
 | Proyecto | Pruebas | Alcance |
 |---|---|---|
-| Servidor | 226 | Servicios, estrategias de conversión, seguridad, filtro CORS y controlador |
-| Cliente de consola | 273 | Controladores, vistas, lectura de datos y adaptador SOAP |
+| Servidor | 342 | Servicios, estrategias de conversión, seguridad, filtro CORS y controlador |
+| Cliente de consola | 318 | Controladores, vistas, lectura de datos y adaptador SOAP |
 | Cliente de escritorio | 253 | Controladores, modelo, utilidades, adaptador SOAP y casos borde |
 | Cliente web | 237 | Modelo, utilidades, controladores, adaptador SOAP y casos borde |
 
