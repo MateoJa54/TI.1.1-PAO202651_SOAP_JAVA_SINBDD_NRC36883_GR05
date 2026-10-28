@@ -233,5 +233,5 @@ Las imágenes exportadas se encuentran en `05. DOCUMENTACION/img`.
 | `01_CASOS_USO` | Diagrama general y un modelo por caso de uso |
 | `02_ACTIVIDAD` | Diagramas de actividad |
 | `03_SECUENCIA` | Diagramas de secuencia de los flujos principales y alternos |
-| `04_CLASES` | Clases del servidor, los clientes existentes y el diseño móvil |
+| `04_CLASES` | Clases del servidor y de los cuatro clientes (consola, escritorio, web y móvil) |
 | `05_ARQUITECTURA` | Diagrama de arquitectura SOA / MVC |
